@@ -1,0 +1,75 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMPZNTFIbhxz7NjNa04VsfQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/C9341-tugba/phyton-project/blob/main/water%20problem\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "823DdTlxcHbv",
+        "outputId": "9f5531e6-ffa3-4983-f0ba-37a37517695c"
+      },
+      "source": [
+        "liste=[]\n",
+        "while True:\n",
+        "    a=input(\"Type ‘ok’ when you are done:\")\n",
+        "    if a.isdigit():\n",
+        "        liste.append(int(a))\n",
+        "    else:\n",
+        "       break\n",
+        "k=0\n",
+        "toplam=0\n",
+        "for i in range(1,len(liste)-1):\n",
+        "    k=min(max(liste[i+1:]),max(liste[i-1::-1]))\n",
+        "    if liste[i]<k:\n",
+        "        toplam+=k-liste[i]\n",
+        "print(toplam)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Type ‘ok’ when you are done:5\n",
+            "Type ‘ok’ when you are done:5\n",
+            "Type ‘ok’ when you are done:6\n",
+            "Type ‘ok’ when you are done:7\n",
+            "Type ‘ok’ when you are done:8\n",
+            "Type ‘ok’ when you are done:9\n",
+            "Type ‘ok’ when you are done:3\n",
+            "Type ‘ok’ when you are done:ok\n",
+            "0\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
